@@ -8,39 +8,39 @@
         },
         "networkInterfaceName": {
             "type": "string",
-            "value": "test-arm-sql244"
+            "defaultValue": "test-arm-sql244"
         },
         "subnetName": {
             "type": "string",
-            "value": "Subnet-Prod-ManagedServices"
+            "defaultValue": "Subnet-Prod-ManagedServices"
         },
         "virtualNetworkId": {
             "type": "string",
-            "value": "/subscriptions/4569c8d3-e19b-4332-8a3b-f545256b9f7e/resourceGroups/Prod-Tools-ManagedServices/providers/Microsoft.Network/virtualNetworks/VNET-Prod-ManagedServices"
+            "defaultValue": "/subscriptions/4569c8d3-e19b-4332-8a3b-f545256b9f7e/resourceGroups/Prod-Tools-ManagedServices/providers/Microsoft.Network/virtualNetworks/VNET-Prod-ManagedServices"
         },
         "virtualMachineName": {
             "type": "string",
-            "value": "Test-ARM-SQL"
+            "defaultValue": "Test-ARM-SQL"
         },
         "virtualMachineComputerName": {
             "type": "string",
-            "value": "Test-ARM-SQL"
+            "defaultValue": "Test-ARM-SQL"
         },
         "virtualMachineRG": {
             "type": "string",
-            "value": "RG-Morpheus-Test"
+            "defaultValue": "RG-Morpheus-Test"
         },
         "osDiskType": {
             "type": "string",
-            "value": "Standard_LRS"
+            "defaultValuedefaultValue": "Standard_LRS"
         },
         "osDiskDeleteOption": {
             "type": "string",
-            "value": "Delete"
+            "defaultValue": "Delete"
         },
         "dataDisks": {
             "type": "array",
-            "value": [
+            "defaultValue": [
                 {
                     "lun": 0,
                     "createOption": "attach",
@@ -81,7 +81,7 @@
         },
         "dataDiskResources": {
             "type": "array",
-            "value": [
+            "defaultValue": [
                 {
                     "name": "Test-ARM-SQL_DataDisk_0",
                     "sku": "Premium_LRS",
@@ -116,149 +116,149 @@
         },
         "virtualMachineSize": {
             "type": "string",
-            "value": "Standard_B2ms"
+            "defaultValue": "Standard_B2ms"
         },
         "nicDeleteOption": {
             "type": "string",
-            "value": "Detach"
+            "defaultValue": "Detach"
         },
         "adminUsername": {
             "type": "string",
-            "value": "admincis"
+            "defaultValue": "admincis"
         },
         "adminPassword": {
             "type": "securestring",
-            "value": null
+            "defaultValue": null
         },
         "patchMode": {
             "type": "string",
-            "value": "AutomaticByOS"
+            "defaultValue": "AutomaticByOS"
         },
         "enableHotpatching": {
             "type": "string",
-            "value": false
+            "defaultValue": false
         },
         "sqlVirtualMachineLocation": {
             "type": "string",
-            "value": "francecentral"
+            "defaultValue": "francecentral"
         },
         "sqlVirtualMachineName": {
             "type": "string",
-            "value": "Test-ARM-SQL"
+            "defaultValue": "Test-ARM-SQL"
         },
         "sqlConnectivityType": {
             "type": "string",
-            "value": "Private"
+            "defaultValue": "Private"
         },
         "sqlPortNumber": {
             "type": "int",
-            "value": 1433
+            "defaultValue": 1433
         },
         "sqlStorageDisksCount": {
             "type": "int",
-            "value": 1
+            "defaultValue": 1
         },
         "sqlStorageWorkloadType": {
             "type": "string",
-            "value": "OLTP"
+            "defaultValue": "OLTP"
         },
         "sqlStorageDisksConfigurationType": {
             "type": "string",
-            "value": "NEW"
+            "defaultValue": "NEW"
         },
         "sqlStorageStartingDeviceId": {
             "type": "int",
-            "value": 2
+            "defaultValue": 2
         },
         "sqlStorageDeploymentToken": {
             "type": "int",
-            "value": 86720
+            "defaultValue": 86720
         },
         "dataPath": {
             "type": "string",
-            "value": "F:\\data"
+            "defaultValue": "F:\\data"
         },
         "dataDisksLUNs": {
             "type": "array",
-            "value": [
+            "defaultValue": [
                 0
             ]
         },
         "logPath": {
             "type": "string",
-            "value": "L:\\log"
+            "defaultValue": "L:\\log"
         },
         "logDisksLUNs": {
             "type": "array",
-            "value": [
+            "defaultValue": [
                 1
             ]
         },
         "tempDbPath": {
             "type": "array",
-            "value": "T:\\tempDb"
+            "defaultValue": "T:\\tempDb"
         },
         "tempDisksLUNs": {
             "type": "array",
-            "value": [
+            "defaultValue": [
                 2
             ]
         },
         "dataFileCount": {
             "type": "int",
-            "value": 1
+            "defaultValue": 1
         },
         "dataFileSize": {
             "type": "int",
-            "value": 8
+            "defaultValue": 8
         },
         "dataGrowth": {
             "type": "int",
-            "value": 64
+            "defaultValue": 64
         },
         "logFileSize": {
             "type": "int",
-            "value": 8
+            "defaultValue": 8
         },
         "logGrowth": {
             "type": "int",
-            "value": 64
+            "defaultValue": 64
         },
         "SQLSystemDbOnDataDisk": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         },
         "rServicesEnabled": {
             "type": "string",
-            "value": "false"
+            "defaultValue": "false"
         },
         "maxdop": {
             "type": "int",
-            "value": 0
+            "defaultValue": 0
         },
         "isOptimizeForAdHocWorkloadsEnabled": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         },
         "collation": {
             "type": "string",
-            "value": "SQL_Latin1_General_CP1_CI_AS"
+            "defaultValue": "SQL_Latin1_General_CP1_CI_AS"
         },
         "minServerMemoryMB": {
             "type": "int",
-            "value": 0
+            "defaultValue": 0
         },
         "maxServerMemoryMB": {
             "type": "int",
-            "value": 2147483647
+            "defaultValue": 2147483647
         },
         "isLPIMEnabled": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         },
         "isIFIEnabled": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         }
     
 
