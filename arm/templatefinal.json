@@ -81,7 +81,7 @@
         },
         "dataDiskResources": {
             "type": "array",
-            "Value": [
+            "defaultValue": [
                 {
                     "name": "Test-ARM-SQL_DataDisk_0",
                     "sku": "Premium_LRS",
@@ -195,12 +195,12 @@
             ]
         },
         "tempDbPath": {
-            "type": "array",
+            "type": "string",
             "defaultValue": "T:\\tempDb"
         },
         "tempDisksLUNs": {
             "type": "array",
-            "Value": [
+            "defaultValue": [
                 2
             ]
         },
@@ -318,7 +318,7 @@
                 },
                 "storageProfile": {
                     "osDisk": {
-                        "createOption": "fromImage",
+                        "createOption": "Empty",
                         "managedDisk": {
                             "storageAccountType": "[parameters('osDiskType')]"
                         },
