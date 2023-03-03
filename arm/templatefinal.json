@@ -40,7 +40,7 @@
         },
         "dataDisks": {
             "type": "array",
-            "Value": [
+            "defaultValue": [
                 {
                     "lun": 0,
                     "createOption": "attach",
