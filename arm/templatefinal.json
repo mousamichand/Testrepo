@@ -32,7 +32,7 @@
         },
         "osDiskType": {
             "type": "string",
-            "defaultValuedefaultValue": "Standard_LRS"
+            "defaultValue": "Standard_LRS"
         },
         "osDiskDeleteOption": {
             "type": "string",
@@ -40,7 +40,7 @@
         },
         "dataDisks": {
             "type": "array",
-            "defaultValue": [
+            "Value": [
                 {
                     "lun": 0,
                     "createOption": "attach",
@@ -81,7 +81,7 @@
         },
         "dataDiskResources": {
             "type": "array",
-            "defaultValue": [
+            "Value": [
                 {
                     "name": "Test-ARM-SQL_DataDisk_0",
                     "sku": "Premium_LRS",
@@ -200,7 +200,7 @@
         },
         "tempDisksLUNs": {
             "type": "array",
-            "defaultValue": [
+            "Value": [
                 2
             ]
         },
