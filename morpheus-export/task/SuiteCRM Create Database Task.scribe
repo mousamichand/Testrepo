@@ -5,11 +5,11 @@ resource "task" "SuiteCRM Create Database Task" {
   executeTarget = "resource"
   lastUpdated = "2024-01-30T15:34:32.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "79bd585d-16ea-44ee-9e88-c667fd9f65d3" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
