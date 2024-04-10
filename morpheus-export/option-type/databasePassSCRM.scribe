@@ -1,0 +1,10 @@
+resource "option-type" "databasePassSCRM" {
+  code = "databasePassSCRM"
+  name = "SuiteCRM DB Password"
+  uuid = "0524aee3-1485-4aab-a499-62861ce16254"
+  fieldContext = "config.customOptions"
+  fieldLabel = "SuiteCRM DB Password"
+  fieldName = "databasePassSCRM"
+  required = true
+  type = "password"
+}

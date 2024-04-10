@@ -1,0 +1,9 @@
+resource "option-type" "databaseNameSCRM" {
+  code = "databaseNameSCRM"
+  name = "SuiteCRM DB Name"
+  uuid = "8fd9855c-c6f6-4be9-b581-1bfef90cc233"
+  fieldContext = "config.customOptions"
+  fieldLabel = "SuiteCRM DB Name"
+  fieldName = "databaseNameSCRM"
+  required = true
+}

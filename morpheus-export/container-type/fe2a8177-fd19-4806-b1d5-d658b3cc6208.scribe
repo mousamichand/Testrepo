@@ -1,0 +1,15 @@
+resource "container-type" "fe2a8177-fd19-4806-b1d5-d658b3cc6208" {
+  code = "fe2a8177-fd19-4806-b1d5-d658b3cc6208"
+  name = "SUITE_CRM_DB_MN_NODE"
+  uuid = "2584ca34-5f89-4a30-b4a0-d998e1ac0b0c"
+  containerVersion = "Latest"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "nodesuitecrmdbmn"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.9" }
+}

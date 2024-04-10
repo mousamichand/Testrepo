@@ -1,0 +1,16 @@
+resource "instance-type-layout" "10bea7c3-7efb-49d8-b4fc-c24f8ee86f3f" {
+  code = "10bea7c3-7efb-49d8-b4fc-c24f8ee86f3f"
+  name = "LO_SUITE_CRM_DB_MN"
+  uuid = "28b0b313-2c13-404a-9772-cb471feaa900"
+  instanceType = { code = "suitecrmdbmn" }
+  instanceVersion = "Latest"
+  memoryRequirement = 0
+  optionTypes = [
+    { code = "databaseNameSCRM" },
+    { code = "databaseUserSCRM" },
+    { code = "databasePassSCRM" }
+  ]
+  provisionType = { code = "vmware" }
+  taskSets = [ { name = "SuiteCRMDB - Multi Node" } ]
+  workloads = [ { code = "fe2a8177-fd19-4806-b1d5-d658b3cc6208" } ]
+}

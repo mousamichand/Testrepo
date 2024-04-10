@@ -1,0 +1,9 @@
+resource "option-type" "databaseUserSCRM" {
+  code = "databaseUserSCRM"
+  name = "SuiteCRM DB User"
+  uuid = "5cf1842d-1a46-4c79-84ee-29062e38be86"
+  fieldContext = "config.customOptions"
+  fieldLabel = "SuiteCRM DB User"
+  fieldName = "databaseUserSCRM"
+  required = true
+}

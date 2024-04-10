@@ -1,0 +1,10 @@
+resource "instance-type" "suitecrmdbmn" {
+  code = "suitecrmdbmn"
+  name = "Suite_CRM_DB_MN"
+  uuid = "92849350-943e-41f3-ab51-c9090b6b03b7"
+  category = "sql"
+  deploymentService = ""
+  environmentPrefix = "SUITECRMDBMN"
+  labels = [ "SuiteCRM" ]
+  layouts = [ { code = "10bea7c3-7efb-49d8-b4fc-c24f8ee86f3f" } ]
+}
