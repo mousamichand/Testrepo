@@ -1,0 +1,12 @@
+resource "task-set" "SuiteCRMDB - Multi Node" {
+  name = "SuiteCRMDB - Multi Node"
+  uuid = "d965f886-0a38-4a0e-9206-7cc832845df9"
+  dateCreated = "2024-01-30T15:38:36.000Z"
+  labels = [ "SuiteCRM" ]
+  lastUpdated = "2024-04-10T15:06:57.000Z"
+  platform = "linux"
+  taskSetTasks = [
+    { uuid = "d5c041fd-0594-48d0-bb37-59b58388504c" },
+    { uuid = "eb2e9580-b518-4c08-a62b-ff890bfce22e" }
+  ]
+}

@@ -1,0 +1,15 @@
+resource "task" "SuiteCRM Create Database Task" {
+  name = "SuiteCRM Create Database Task"
+  uuid = "84407e08-4834-4190-98d2-ce9dc2a0421b"
+  dateCreated = "2024-01-30T15:34:32.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-01-30T15:34:32.000Z"
+  options = [
+    {
+      content = { uuid = "79bd585d-16ea-44ee-9e88-c667fd9f65d3" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+}

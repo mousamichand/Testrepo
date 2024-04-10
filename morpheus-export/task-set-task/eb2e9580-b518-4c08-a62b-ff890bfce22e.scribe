@@ -1,0 +1,5 @@
+resource "task-set-task" "eb2e9580-b518-4c08-a62b-ff890bfce22e" {
+  uuid = "eb2e9580-b518-4c08-a62b-ff890bfce22e"
+  task = { name = "SuiteCRM Create Database Task" }
+  taskOrder = 1
+}

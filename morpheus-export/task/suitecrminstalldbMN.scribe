@@ -1,0 +1,16 @@
+resource "task" "suitecrminstalldbMN" {
+  code = "suitecrminstalldbMN"
+  name = "suitecrm install db multi node CentOS"
+  uuid = "e7423c4b-75cd-49f4-abfe-f573c940c86e"
+  dateCreated = "2024-01-30T15:33:23.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-01-30T15:33:23.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "7ba994f5-ffff-4e87-86ec-cab522faeda9" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

@@ -1,0 +1,20 @@
+resource "file-content" "79bd585d-16ea-44ee-9e88-c667fd9f65d3" {
+  uuid = "79bd585d-16ea-44ee-9e88-c667fd9f65d3"
+  content = <<EOFSCRIBE
+RPass="<%=cypher.read('secret/mysql_root')%>"
+CIPass="<%=cypher.read('secret/cloudinit')%>"
+SCRMDb="<%=customOptions.databaseNameSCRM%>"
+SCRMUser="<%=customOptions.databaseUserSCRM%>"
+SCRMPass="<%=customOptions.databasePassSCRM%>"
+MYSQL_HOST="<%=evars.SUITECRMDBMN_IP%>"
+IP="<%=server.internalIp%>"
+
+mysql -u root -p$RPass -e "CREATE USER '$SCRMUser'@'%' IDENTIFIED BY '$SCRMPass';"
+mysql -u root -p$RPass -e "CREATE DATABASE $SCRMDb;"
+mysql -u root -p$RPass -e "GRANT ALL ON $SCRMDb.* TO '$SCRMUser'@'%' IDENTIFIED BY '$SCRMPass';"
+mysql -u root -p$RPass -e "GRANT SELECT, PROCESS, SHOW DATABASES ON *.* TO '$SCRMUser'@'%' IDENTIFIED BY '$SCRMPass';"
+mysql -u root -p$RPass -e "FLUSH PRIVILEGES;"
+EOFSCRIBE
+  dateCreated = "2024-01-30T15:34:32.000Z"
+  lastUpdated = "2024-01-30T15:34:32.000Z"
+}

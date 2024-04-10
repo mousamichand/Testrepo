@@ -1,0 +1,45 @@
+resource "file-content" "7ba994f5-ffff-4e87-86ec-cab522faeda9" {
+  uuid = "7ba994f5-ffff-4e87-86ec-cab522faeda9"
+  content = <<EOFSCRIBE
+RPass="<%=cypher.read('secret/mysql_root')%>"
+IP="<%=server.internalIp%>"
+
+#Wait until any apt-get processes have finished
+until [ `ps -ef | grep [a]pt-get | wc -l` = 0 ]
+do
+        sleep 60
+done
+
+#Install MySQL 5.7, start service and enable on boot
+#This is specifically for RHEL or CentOS
+sudo yum install -y epel-release
+sudo yum install wget pv -y
+wget https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
+chmod +x mariadb_repo_setup
+sudo ./mariadb_repo_setup \ --mariadb-server-version="mariadb-10.6"
+sudo yum install MariaDB-server MariaDB-backup -y
+#sudo apt-get install mariadb-server mariadb-client -y
+sudo systemctl stop mariadb.service
+sudo systemctl start mariadb.service
+sudo systemctl enable mariadb.service
+
+#The following commands are from the mysql secure installation guidance
+sudo mysql -u root -e "UPDATE mysql.user SET Password=PASSWORD('$RPass') WHERE User='root';"
+sudo mysql -u root -e "flush privileges"
+sudo mysql -u root -p$RPass -e "DELETE FROM mysql.user WHERE User='';"
+sudo mysql -u root -p$RPass -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
+sudo mysql -u root -p$RPass -e "DROP DATABASE IF EXISTS test;"
+sudo mysql -u root -p$RPass -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%';"
+sudo mysql -u root -p$RPass -e "FLUSH PRIVILEGES;"
+
+#Set bind-address parameter in my.cnf
+echo [mysqld] >> /etc/my.cnf
+echo "bind-address = $IP" >> /etc/my.cnf
+sudo systemctl restart mysql
+
+sudo firewall-cmd --zone=public --add-port=3306/tcp --permanent
+sudo firewall-cmd --reload
+EOFSCRIBE
+  dateCreated = "2024-01-30T15:33:23.000Z"
+  lastUpdated = "2024-01-30T15:33:23.000Z"
+}
