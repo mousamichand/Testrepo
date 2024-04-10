@@ -5,11 +5,11 @@ resource "task" "suitecrm apache restart" {
   executeTarget = "resource"
   lastUpdated = "2024-01-30T15:32:12.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "3cbddcfb-c4ca-45f3-882b-9ba06fc8a203" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
