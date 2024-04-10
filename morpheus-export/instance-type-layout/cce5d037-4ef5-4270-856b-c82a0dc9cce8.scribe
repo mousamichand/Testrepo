@@ -1,0 +1,11 @@
+resource "instance-type-layout" "cce5d037-4ef5-4270-856b-c82a0dc9cce8" {
+  code = "cce5d037-4ef5-4270-856b-c82a0dc9cce8"
+  name = "LO_SUITE_CRM_APP_MN"
+  uuid = "5f7a9f05-7505-4610-b7fc-9a853a235db2"
+  instanceType = { code = "suitecrmappmn" }
+  instanceVersion = "Latest"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  taskSets = [ { name = "SuiteCRMApp - Multi Node" } ]
+  workloads = [ { code = "b8ad5230-3258-46e4-9f7a-bb4d499d5df0" } ]
+}

@@ -1,0 +1,15 @@
+resource "container-type" "b8ad5230-3258-46e4-9f7a-bb4d499d5df0" {
+  code = "b8ad5230-3258-46e4-9f7a-bb4d499d5df0"
+  name = "SUITE_CRM_APP_MN_NODE"
+  uuid = "583d17ff-73cc-4ba9-9ced-3c31a8079f06"
+  containerVersion = "Latest"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "nodesuitecrmappmn"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.ubuntu.22.04.20230918.amd64" }
+}

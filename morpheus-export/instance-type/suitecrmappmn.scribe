@@ -1,0 +1,10 @@
+resource "instance-type" "suitecrmappmn" {
+  code = "suitecrmappmn"
+  name = "Suite_CRM_App_MN"
+  uuid = "a5c0ab8c-34bd-448d-8778-fe0f9bf1ba90"
+  category = "apps"
+  deploymentService = ""
+  environmentPrefix = "SUITECRMAPPMN"
+  labels = [ "SuiteCRM" ]
+  layouts = [ { code = "cce5d037-4ef5-4270-856b-c82a0dc9cce8" } ]
+}
