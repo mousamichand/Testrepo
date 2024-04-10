@@ -1,0 +1,19 @@
+resource "task" "suitecrmfiletemplate" {
+  code = "suitecrmfiletemplate"
+  name = "suitecrm file template"
+  uuid = "c8b881db-29b3-4577-bab1-17d7e5467fa6"
+  dateCreated = "2024-01-30T15:31:05.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-01-30T15:31:05.000Z"
+  options = [
+    {
+      optionType = { code = "containerTemplateId" }
+      value = { code = "4defccff-f385-4411-9213-b1799d3e4e79" }
+    },
+    {
+      optionType = { code = "containerTemplate" }
+      value = "suitecrm - conf"
+    }
+  ]
+  taskType = { code = "containerTemplate" }
+}

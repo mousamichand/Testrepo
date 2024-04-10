@@ -1,0 +1,16 @@
+resource "task" "suitecrminstallappMN" {
+  code = "suitecrminstallappMN"
+  name = "suitecrm install app multi node"
+  uuid = "dac7f54b-19a4-4a72-8823-7a6b44a8aaa9"
+  dateCreated = "2024-01-30T15:35:41.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-01-30T15:35:41.000Z"
+  options = [
+    {
+      content = { uuid = "a2a0c175-87e9-4bb9-a5c5-af5bb5c3b783" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+}

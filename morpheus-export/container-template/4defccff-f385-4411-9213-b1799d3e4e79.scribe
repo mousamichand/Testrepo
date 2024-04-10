@@ -1,0 +1,35 @@
+resource "container-template" "4defccff-f385-4411-9213-b1799d3e4e79" {
+  code = "4defccff-f385-4411-9213-b1799d3e4e79"
+  name = "suitecrm - conf"
+  uuid = "f705791a-1151-4548-b61f-ec059163f127"
+  dateCreated = "2024-01-30T15:28:52.000Z"
+  fileName = "suitecrm.conf"
+  fileOwner = "root"
+  filePath = "/etc/apache2/sites-available"
+  lastUpdated = "2024-01-30T15:28:52.000Z"
+  settingCategory = "App"
+  settingName = "suitecrm"
+  template = <<EOFSCRIBE
+<VirtualHost *:80>
+     ServerAdmin admin@localhost
+     ServerAlias "<%=server.externalIp%>"
+     DocumentRoot /var/www/html/suitecrm
+
+     <Directory /var/www/html/suitecrm/>
+          Options FollowSymlinks
+          AllowOverride All
+          Require all granted
+     </Directory>
+
+     ErrorLog ${APACHE_LOG_DIR}/error.log
+     CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+     <Directory /var/www/html/suitecrm/>
+            RewriteEngine on
+            RewriteBase /
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^(.*) index.php [PT,L]
+    </Directory>
+</VirtualHost>
+EOFSCRIBE
+}

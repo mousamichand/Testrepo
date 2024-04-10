@@ -1,0 +1,6 @@
+resource "task-set-task" "406774fb-b5bc-4072-a21f-f85111dab9d8" {
+  uuid = "406774fb-b5bc-4072-a21f-f85111dab9d8"
+  task = { name = "suitecrm apache restart" }
+  taskOrder = 2
+  taskPhase = "provision"
+}

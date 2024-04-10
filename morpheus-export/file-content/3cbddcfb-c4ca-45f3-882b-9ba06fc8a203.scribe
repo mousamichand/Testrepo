@@ -1,0 +1,11 @@
+resource "file-content" "3cbddcfb-c4ca-45f3-882b-9ba06fc8a203" {
+  uuid = "3cbddcfb-c4ca-45f3-882b-9ba06fc8a203"
+  content = <<EOFSCRIBE
+a2ensite suitecrm.conf
+a2enmod rewrite
+systemctl restart apache2.service
+
+EOFSCRIBE
+  dateCreated = "2024-01-30T15:32:12.000Z"
+  lastUpdated = "2024-01-30T15:32:12.000Z"
+}

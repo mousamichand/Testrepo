@@ -1,0 +1,13 @@
+resource "task-set" "SuiteCRMApp - Multi Node" {
+  name = "SuiteCRMApp - Multi Node"
+  uuid = "165f3dda-a40a-4ba8-9d22-010e479070ff"
+  dateCreated = "2024-01-30T15:39:59.000Z"
+  labels = [ "SuiteCRM" ]
+  lastUpdated = "2024-04-10T15:06:50.000Z"
+  platform = "linux"
+  taskSetTasks = [
+    { uuid = "406774fb-b5bc-4072-a21f-f85111dab9d8" },
+    { uuid = "bd41e3e7-316e-4771-a41a-b9f8b5adc0d0" },
+    { uuid = "f8a71b53-317a-404d-88b9-cec9d379c55b" }
+  ]
+}

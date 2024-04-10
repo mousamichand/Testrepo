@@ -1,0 +1,5 @@
+resource "task-set-task" "bd41e3e7-316e-4771-a41a-b9f8b5adc0d0" {
+  uuid = "bd41e3e7-316e-4771-a41a-b9f8b5adc0d0"
+  task = { code = "suitecrminstallappMN" }
+  taskPhase = "provision"
+}
