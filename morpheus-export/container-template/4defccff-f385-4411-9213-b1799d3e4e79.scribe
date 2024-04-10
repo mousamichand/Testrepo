@@ -6,7 +6,8 @@ resource "container-template" "4defccff-f385-4411-9213-b1799d3e4e79" {
   fileName = "suitecrm.conf"
   fileOwner = "root"
   filePath = "/etc/apache2/sites-available"
-  lastUpdated = "2024-01-30T15:28:52.000Z"
+  labels = [ "SuiteCRM" ]
+  lastUpdated = "2024-04-10T16:15:22.000Z"
   settingCategory = "App"
   settingName = "suitecrm"
   template = <<EOFSCRIBE
