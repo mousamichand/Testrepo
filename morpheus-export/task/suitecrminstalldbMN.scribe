@@ -6,11 +6,11 @@ resource "task" "suitecrminstalldbMN" {
   executeTarget = "resource"
   lastUpdated = "2024-01-30T15:33:23.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "7ba994f5-ffff-4e87-86ec-cab522faeda9" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
