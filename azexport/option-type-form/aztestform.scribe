@@ -1,0 +1,74 @@
+resource "option-type-form" "aztestform" {
+  code = "aztestform"
+  name = "azTestForm"
+  uuid = "bb7f11d5-ee03-4a99-b823-d7305fef664d"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "33edd67f-fdd7-4341-88ea-f048b35db2cd"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+    }
+  ]
+  labels = [ "migrate" ]
+  options = [
+    {
+      code = "aztestinput1"
+      name = "AZ Test Input1"
+      uuid = "dd3a02ca-bcde-4053-b80e-29e1ed2d1f93"
+      exportMeta = true
+      fieldContext = "config.customOptions"
+      fieldLabel = "AZ test INput 1"
+      fieldName = "aztestinput1"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "aztestinput2"
+      name = "AZ Test Input2"
+      uuid = "cc880e85-9e1f-4a61-b808-b76719bb3938"
+      fieldContext = "config.customOptions"
+      fieldLabel = "AZ test INput 2"
+      fieldName = "aztestinput2"
+      labels = [ "migrate" ]
+    },
+    {
+      code = "e76f16b6-d35e-457c-a8c3-c8b5d31b8a52"
+      name = "e76f16b6-d35e-457c-a8c3-c8b5d31b8a52"
+      uuid = "27cdf9c1-3072-4329-b2c7-ede3ad1d5e13"
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "AZ Group"
+      fieldName = "aztestGrp"
+      formField = true
+    },
+    {
+      code = "d0bd6d1e-00e4-427c-b2b9-2f97445f89e7"
+      name = "d0bd6d1e-00e4-427c-b2b9-2f97445f89e7"
+      uuid = "fa482dd1-41d0-447a-a29d-d03574360f68"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = 2685
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "AZ Clouds"
+      fieldName = "AztestCloud"
+      formField = true
+      type = "cloud"
+    }
+  ]
+}
