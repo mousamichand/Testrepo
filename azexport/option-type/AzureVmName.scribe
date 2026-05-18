@@ -1,0 +1,10 @@
+resource "option-type" "AzureVmName" {
+  code = "AzureVmName"
+  name = "Azure VM Name"
+  uuid = "51040370-b067-49ec-977d-b77b7206f761"
+  exportMeta = true
+  fieldContext = "config.customOptions"
+  fieldLabel = "VM  Name"
+  fieldName = "AzureVmName"
+  required = true
+}

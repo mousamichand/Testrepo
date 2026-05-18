@@ -1,0 +1,14 @@
+resource "task-set" "aztestinput" {
+  name = "aztestinput"
+  uuid = "4a9f5e13-06e9-4941-aba6-b4355d1c12e4"
+  dateCreated = "2026-05-18T12:35:17.000Z"
+  labels = [ "migrate" ]
+  lastUpdated = "2026-05-18T12:35:28.000Z"
+  optionTypes = [
+    { code = "aztestinput1" },
+    { code = "aztestinput2" },
+    { code = "AzureVmName" }
+  ]
+  taskSetTasks = [ { uuid = "9d0e9c22-4dbe-4d2a-abf5-3749dbaba03d" } ]
+  taskSetType = "operation"
+}

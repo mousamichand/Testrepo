@@ -1,0 +1,19 @@
+resource "task" "Resize Azure Instance -add disk" {
+  name = "Resize Azure Instance -add disk"
+  uuid = "ad4c85fe-b268-42cd-81dd-e2e8c2b400f1"
+  dateCreated = "2023-11-14T15:47:55.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-03-20T14:32:19.000Z"
+  options = [
+    {
+      optionType = { code = "pythonAdditionalPackages" }
+      value = "requests"
+    },
+    {
+      content = { uuid = "84fd5662-18ab-418f-bb8d-f34085657786" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  taskType = { code = "jythonTask" }
+  visibility = "public"
+}

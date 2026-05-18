@@ -1,0 +1,39 @@
+resource "file-content" "84fd5662-18ab-418f-bb8d-f34085657786" {
+  uuid = "84fd5662-18ab-418f-bb8d-f34085657786"
+  content = <<EOFSCRIBE
+import requests
+apitoken=morpheus['cypher']['read']('apitoken')
+url = "https://10.32.20.128/api/instances/64/resize"
+
+payload = {
+    "deleteOriginalVolumes": False,
+    "volumes": [
+        {
+            "id": 1,
+            "rootVolume": False,
+            "name": "data",
+            "size": 5,
+            "storageType": 38
+        }
+    ]
+}
+headers = {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "authorization": "Bearer "+ apitoken
+}
+
+response = requests.get(url, json=payload, headers=headers)
+print(response.text)
+configspec['backup']['job']= backupjob['job']['name']
+configspec['backup']['jobId']= backupjob['job']['id']
+##### config - print updated spec
+newconfigspec = {}
+newconfigspec['spec'] = configspec
+print(json.dumps(newconfigspec))
+
+
+EOFSCRIBE
+  dateCreated = "2023-11-14T15:47:55.000Z"
+  lastUpdated = "2024-03-20T14:32:19.000Z"
+}

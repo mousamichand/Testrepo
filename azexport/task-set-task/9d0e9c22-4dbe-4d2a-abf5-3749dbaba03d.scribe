@@ -1,0 +1,5 @@
+resource "task-set-task" "9d0e9c22-4dbe-4d2a-abf5-3749dbaba03d" {
+  uuid = "9d0e9c22-4dbe-4d2a-abf5-3749dbaba03d"
+  task = { name = "Resize Azure Instance -add disk" }
+  taskPhase = "operation"
+}
