@@ -1,9 +1,0 @@
-resource "option-type" "aztestinput2" {
-  code = "aztestinput2"
-  name = "AZ Test Input2"
-  uuid = "cc880e85-9e1f-4a61-b808-b76719bb3938"
-  fieldContext = "config.customOptions"
-  fieldLabel = "AZ test INput 2"
-  fieldName = "aztestinput2"
-  labels = [ "migrate" ]
-}
