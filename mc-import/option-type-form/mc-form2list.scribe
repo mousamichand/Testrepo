@@ -1,0 +1,72 @@
+resource "option-type-form" "mc-form2list" {
+  code = "mc-form2list"
+  name = "mc-form2"
+  uuid = "24b7f756-914c-43da-b8e3-abc65580a905"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  labels = [ "migrate" ]
+  options = [
+    {
+      code = "mctestinput1"
+      name = "mc-testinput 1"
+      uuid = "2fc70a98-a11d-4020-a4a3-5b18865d2118"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc testinput 1"
+      fieldName = "mctestinput1"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "mctestinput2"
+      name = "mc-testinput 2"
+      uuid = "b08fc909-5864-453a-9ad7-d4d35893fd82"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc test input 2"
+      fieldName = "mctestinput2"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "8f138944-7be2-401a-93ce-3301e0d2dac6"
+      name = "8f138944-7be2-401a-93ce-3301e0d2dac6"
+      uuid = "e389e704-f064-4d20-948f-42bdf72f3205"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = ""
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud List"
+      fieldName = "mc-cloudList"
+      formField = true
+      refCode = "8f138944-7be2-401a-93ce-3301e0d2dac6"
+      type = "cloud"
+    },
+    {
+      code = "0470e784-03a1-4947-85f2-c929c5dc5541"
+      name = "0470e784-03a1-4947-85f2-c929c5dc5541"
+      uuid = "338c584c-249f-4e81-8540-e771e429e6d3"
+      config = { allowReadonly = false }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group List"
+      fieldName = "MC-GroupList"
+      formField = true
+      refCode = "0470e784-03a1-4947-85f2-c929c5dc5541"
+      type = "group"
+    }
+  ]
+}
