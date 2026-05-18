@@ -1,0 +1,21 @@
+resource "task" "addresourcegp" {
+  code = "addresourcegp"
+  name = "Add ResourceGroup"
+  uuid = "5084cd0e-19a4-47b1-b278-99468d500b79"
+  dateCreated = "2023-12-12T16:50:13.000Z"
+  executeTarget = "local"
+  labels = [ "groupebel" ]
+  lastUpdated = "2023-12-19T16:25:50.000Z"
+  options = [
+    {
+      optionType = { code = "pythonAdditionalPackages" }
+      value = "requests"
+    },
+    {
+      content = { uuid = "b1975419-71c8-49e6-a9c6-f9826c45184c" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "jythonTask" }
+}
