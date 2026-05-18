@@ -1,0 +1,72 @@
+resource "option-type-form" "mcTestForm" {
+  code = "mcTestForm"
+  name = "MC Test Form"
+  uuid = "13f854cf-4b2c-48e9-8865-7bd43e90d71b"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  labels = [ "migrate" ]
+  options = [
+    {
+      code = "mctestinput1"
+      name = "mc-testinput 1"
+      uuid = "2fc70a98-a11d-4020-a4a3-5b18865d2118"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc testinput 1"
+      fieldName = "mctestinput1"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "mctestinput2"
+      name = "mc-testinput 2"
+      uuid = "b08fc909-5864-453a-9ad7-d4d35893fd82"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc test input 2"
+      fieldName = "mctestinput2"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "45962647-75f7-4d21-b2b4-e831bcb8a005"
+      name = "45962647-75f7-4d21-b2b4-e831bcb8a005"
+      uuid = "6a5210ce-09f3-4004-b6ee-2c61445d868c"
+      config = { allowReadonly = false }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "MC Groups"
+      fieldName = "MC-TestGroups"
+      formField = true
+      refCode = "45962647-75f7-4d21-b2b4-e831bcb8a005"
+      type = "group"
+    },
+    {
+      code = "5b1f5cf5-a820-4bb1-b29e-c13a4c655bb4"
+      name = "5b1f5cf5-a820-4bb1-b29e-c13a4c655bb4"
+      uuid = "fcdfeca4-4f87-4f9b-92c0-f619c0669616"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = "45962647-75f7-4d21-b2b4-e831bcb8a005"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "MC Clouds"
+      fieldName = "input4"
+      formField = true
+      refCode = "5b1f5cf5-a820-4bb1-b29e-c13a4c655bb4"
+      type = "cloud"
+    }
+  ]
+}
