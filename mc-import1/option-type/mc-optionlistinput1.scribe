@@ -1,0 +1,14 @@
+resource "option-type" "mc-optionlistinput1" {
+  code = "mc-optionlistinput1"
+  name = "mc-optionlist input1"
+  uuid = "8f5a935b-b0ab-43af-8a7d-10a406ffcaf4"
+  config = { _retainDefault = "" }
+  fieldContext = "config.customOptions"
+  fieldLabel = "mc option list 1"
+  fieldName = "mc-optionlistinput1"
+  labels = [ "migrate" ]
+  optionList = { name = "mc-testoptionlist1" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
