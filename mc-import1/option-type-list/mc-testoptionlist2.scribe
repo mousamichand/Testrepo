@@ -1,0 +1,6 @@
+resource "option-type-list" "mc-testoptionlist2" {
+  name = "mc-testoptionlist2"
+  uuid = "ee010dff-a0c7-4f6c-b9ba-fe8e2cdc390b"
+  labels = [ "migrate" ]
+  type = "manual"
+}
