@@ -1,0 +1,89 @@
+resource "option-type-form" "MC azform3" {
+  code = "MC azform3"
+  name = "MC AZform3"
+  uuid = "aa63a53d-39cb-462a-8303-1bade57f388b"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "95da673d-6442-4b04-a94c-3e6e4e6f1486"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "mc-optionlistinput1"
+          name = "mc-optionlist input1"
+          uuid = "4210c15c-02ed-42e8-a22d-9d6afec1fbbd"
+          config = { _retainDefault = "" }
+          fieldContext = "config.customOptions"
+          fieldLabel = "mc option list 1"
+          fieldName = "mc-optionlistinput1"
+          optionList = { name = "mc-testoptionlist1" }
+          optionSource = "list"
+          refCode = "mc-optionlistinput1"
+          required = true
+          type = "select"
+        },
+        {
+          code = "mc-optionlistinput2"
+          name = "mc-optionlist input2"
+          uuid = "1cacfdc7-97b4-45e0-a8f6-9489238a129f"
+          config = { _retainDefault = "" }
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "mc -option list input 2"
+          fieldName = "mc-optionlistinput2"
+          optionList = { name = "mc-testoptionlist2" }
+          optionSource = "list"
+          refCode = "mc-optionlistinput2"
+          type = "select"
+        }
+      ]
+    }
+  ]
+  labels = [ "migrate" ]
+  options = [
+    {
+      code = "mctestinput1"
+      name = "mc-testinput 1"
+      uuid = "265decc2-5edd-4f11-9b3d-3e491ae86c8f"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc testinput 1"
+      fieldName = "mctestinput1"
+      refCode = "mctestinput1"
+      required = true
+    },
+    {
+      code = "mctestinput2"
+      name = "mc-testinput 2"
+      uuid = "517e1a10-d7b6-4832-b32e-4850e30faba4"
+      config = { _retainDefault = "" }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc test input 2"
+      fieldName = "mctestinput2"
+      refCode = "mctestinput2"
+      required = true
+    },
+    {
+      code = "63ccc1f7-992b-405d-97a8-3465f1d63f7c"
+      name = "63ccc1f7-992b-405d-97a8-3465f1d63f7c"
+      uuid = "b76906b4-c46a-4d86-b013-5cd03bfa8210"
+      config = { allowReadonly = false }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Groups"
+      fieldName = "mc-Groups"
+      formField = true
+      refCode = "63ccc1f7-992b-405d-97a8-3465f1d63f7c"
+      type = "group"
+    }
+  ]
+}
