@@ -1,0 +1,87 @@
+resource "option-type-form" "azform1" {
+  code = "azform1"
+  name = "AZFORM1"
+  uuid = "8ecb7b75-d1e8-4dce-bc80-e8165aec6e6b"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "95da673d-6442-4b04-a94c-3e6e4e6f1486"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "mc-optionlistinput1"
+          name = "mc-optionlist input1"
+          uuid = "8f5a935b-b0ab-43af-8a7d-10a406ffcaf4"
+          config = { _retainDefault = "" }
+          fieldContext = "config.customOptions"
+          fieldLabel = "mc option list 1"
+          fieldName = "mc-optionlistinput1"
+          labels = [ "migrate" ]
+          optionList = { name = "mc-testoptionlist1" }
+          optionSource = "list"
+          required = true
+          type = "select"
+        },
+        {
+          code = "mc-optionlistinput2"
+          name = "mc-optionlist input2"
+          uuid = "b7eb952b-0256-46df-8b53-868d4ffe5bb4"
+          config = { _retainDefault = "" }
+          fieldContext = "config.customOptions"
+          fieldLabel = "mc -option list input 2"
+          fieldName = "mc-optionlistinput2"
+          labels = [ "migrate" ]
+          optionList = { name = "mc-testoptionlist2" }
+          optionSource = "list"
+          type = "select"
+        }
+      ]
+    }
+  ]
+  labels = [ "migrate" ]
+  options = [
+    {
+      code = "mctestinput1"
+      name = "mc-testinput 1"
+      uuid = "de2cc55f-0552-4634-a665-3b9d2cc9f05a"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc testinput 1"
+      fieldName = "mctestinput1"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "mctestinput2"
+      name = "mc-testinput 2"
+      uuid = "c93aa51e-a122-43a6-bf85-62c55fe962ce"
+      config = { _retainDefault = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "mc test input 2"
+      fieldName = "mctestinput2"
+      labels = [ "migrate" ]
+      required = true
+    },
+    {
+      code = "63ccc1f7-992b-405d-97a8-3465f1d63f7c"
+      name = "63ccc1f7-992b-405d-97a8-3465f1d63f7c"
+      uuid = "a636ead3-ce24-458d-b8a6-8b1322b0f3cb"
+      config = { allowReadonly = false }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Groups"
+      fieldName = "mc-Groups"
+      formField = true
+      refCode = "63ccc1f7-992b-405d-97a8-3465f1d63f7c"
+      type = "group"
+    }
+  ]
+}
