@@ -51,24 +51,23 @@ resource "option-type-form" "mc-form2" {
     {
       code = "mctestinput1"
       name = "mc-testinput 1"
-      uuid = "1d102867-cbda-4cde-ae0e-ee07a726f55a"
+      uuid = "de2cc55f-0552-4634-a665-3b9d2cc9f05a"
       config = { _retainDefault = "" }
       fieldContext = "config.customOptions"
       fieldLabel = "mc testinput 1"
       fieldName = "mctestinput1"
-      refCode = "mctestinput1"
+      labels = [ "migrate" ]
       required = true
     },
     {
       code = "mctestinput2"
       name = "mc-testinput 2"
-      uuid = "08d1da66-8d1f-4c28-ae66-2275f43b8134"
+      uuid = "c93aa51e-a122-43a6-bf85-62c55fe962ce"
       config = { _retainDefault = "" }
-      displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "mc test input 2"
       fieldName = "mctestinput2"
-      refCode = "mctestinput2"
+      labels = [ "migrate" ]
       required = true
     },
     {
