@@ -19,29 +19,28 @@ resource "option-type-form" "mc-form1" {
         {
           code = "mc-optionlistinput1"
           name = "mc-optionlist input1"
-          uuid = "dbba9434-7fc0-4949-8100-63f7fccb1098"
+          uuid = "8f5a935b-b0ab-43af-8a7d-10a406ffcaf4"
           config = { _retainDefault = "" }
           fieldContext = "config.customOptions"
           fieldLabel = "mc option list 1"
           fieldName = "mc-optionlistinput1"
+          labels = [ "migrate" ]
           optionList = { name = "mc-testoptionlist1" }
           optionSource = "list"
-          refCode = "mc-optionlistinput1"
           required = true
           type = "select"
         },
         {
           code = "mc-optionlistinput2"
           name = "mc-optionlist input2"
-          uuid = "1dadc3e1-2f1b-4372-a4ec-e0ebb6b73cde"
+          uuid = "b7eb952b-0256-46df-8b53-868d4ffe5bb4"
           config = { _retainDefault = "" }
-          displayOrder = 1
           fieldContext = "config.customOptions"
           fieldLabel = "mc -option list input 2"
           fieldName = "mc-optionlistinput2"
+          labels = [ "migrate" ]
           optionList = { name = "mc-testoptionlist2" }
           optionSource = "list"
-          refCode = "mc-optionlistinput2"
           type = "select"
         }
       ]
@@ -52,24 +51,23 @@ resource "option-type-form" "mc-form1" {
     {
       code = "mctestinput1"
       name = "mc-testinput 1"
-      uuid = "750467ab-0520-4125-8757-21d979e0e49c"
+      uuid = "de2cc55f-0552-4634-a665-3b9d2cc9f05a"
       config = { _retainDefault = "" }
       fieldContext = "config.customOptions"
       fieldLabel = "mc testinput 1"
       fieldName = "mctestinput1"
-      refCode = "mctestinput1"
+      labels = [ "migrate" ]
       required = true
     },
     {
       code = "mctestinput2"
       name = "mc-testinput 2"
-      uuid = "197a363b-6cb1-42b4-8730-7612eba15047"
+      uuid = "c93aa51e-a122-43a6-bf85-62c55fe962ce"
       config = { _retainDefault = "" }
-      displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "mc test input 2"
       fieldName = "mctestinput2"
-      refCode = "mctestinput2"
+      labels = [ "migrate" ]
       required = true
     },
     {
