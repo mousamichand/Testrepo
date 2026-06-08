@@ -19,29 +19,28 @@ resource "option-type-form" "MC azform3" {
         {
           code = "mc-optionlistinput1"
           name = "mc-optionlist input1"
-          uuid = "4210c15c-02ed-42e8-a22d-9d6afec1fbbd"
+          uuid = "8f5a935b-b0ab-43af-8a7d-10a406ffcaf4"
           config = { _retainDefault = "" }
           fieldContext = "config.customOptions"
           fieldLabel = "mc option list 1"
           fieldName = "mc-optionlistinput1"
+          labels = [ "migrate" ]
           optionList = { name = "mc-testoptionlist1" }
           optionSource = "list"
-          refCode = "mc-optionlistinput1"
           required = true
           type = "select"
         },
         {
           code = "mc-optionlistinput2"
           name = "mc-optionlist input2"
-          uuid = "1cacfdc7-97b4-45e0-a8f6-9489238a129f"
+          uuid = "b7eb952b-0256-46df-8b53-868d4ffe5bb4"
           config = { _retainDefault = "" }
-          displayOrder = 1
           fieldContext = "config.customOptions"
           fieldLabel = "mc -option list input 2"
           fieldName = "mc-optionlistinput2"
+          labels = [ "migrate" ]
           optionList = { name = "mc-testoptionlist2" }
           optionSource = "list"
-          refCode = "mc-optionlistinput2"
           type = "select"
         }
       ]
@@ -52,24 +51,23 @@ resource "option-type-form" "MC azform3" {
     {
       code = "mctestinput1"
       name = "mc-testinput 1"
-      uuid = "265decc2-5edd-4f11-9b3d-3e491ae86c8f"
+      uuid = "de2cc55f-0552-4634-a665-3b9d2cc9f05a"
       config = { _retainDefault = "" }
       fieldContext = "config.customOptions"
       fieldLabel = "mc testinput 1"
       fieldName = "mctestinput1"
-      refCode = "mctestinput1"
+      labels = [ "migrate" ]
       required = true
     },
     {
       code = "mctestinput2"
       name = "mc-testinput 2"
-      uuid = "517e1a10-d7b6-4832-b32e-4850e30faba4"
+      uuid = "c93aa51e-a122-43a6-bf85-62c55fe962ce"
       config = { _retainDefault = "" }
-      displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "mc test input 2"
       fieldName = "mctestinput2"
-      refCode = "mctestinput2"
+      labels = [ "migrate" ]
       required = true
     },
     {
