@@ -1,0 +1,14 @@
+resource "container-type" "7d78c72b-e8cb-4712-89e2-16aa01600269" {
+  code = "7d78c72b-e8cb-4712-89e2-16aa01600269"
+  name = "mc-test10 vmtype"
+  uuid = "a673cee0-610d-48aa-a19f-57a1d15615bd"
+  actions = [ { code = "generic-remove-node" } ]
+  containerVersion = "1.0"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  serverType = "vm"
+  shortName = "mc-testvmtype"
+  showServerLogs = true
+  statTypeCode = "vm"
+}

@@ -1,0 +1,11 @@
+resource "instance-type" "mc-test10" {
+  code = "mc-test10"
+  name = "mc-test10"
+  uuid = "c0332e8d-ff83-43cf-ac9f-64ad8b0b9c2d"
+  category = "cloud"
+  deploymentService = ""
+  environmentPrefix = "MC-TEST10"
+  hasAutoScale = true
+  labels = [ "migrate" ]
+  layouts = [ { code = "ea06c809-4be0-456f-9197-b4a873662f1c" } ]
+}

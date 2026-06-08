@@ -1,0 +1,12 @@
+resource "instance-type-layout" "ea06c809-4be0-456f-9197-b4a873662f1c" {
+  code = "ea06c809-4be0-456f-9197-b4a873662f1c"
+  name = "mc-test10 layout"
+  uuid = "66c0ecd9-7b16-48d9-a85a-e7bc83ff19a1"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "mc-test10" }
+  instanceVersion = "1.0"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "7d78c72b-e8cb-4712-89e2-16aa01600269" } ]
+}
